@@ -1,3 +1,7 @@
+//Find square numbers : 
+// num * num : square numbers
+
+
 //One Solution
 
 const isSquare = function (n) {
