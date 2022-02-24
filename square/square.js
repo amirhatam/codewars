@@ -3,7 +3,6 @@
 
 
 //One Solution
-
 const isSquare = function (n) {
     let result = false
     const max = 1000000
@@ -13,12 +12,15 @@ const isSquare = function (n) {
             result = true
         }
     }
-
     return result
+}
+// console.log(isSquare(26));
 
+
+//BEST Practices
+function isSquare(n) {
+    return Math.sqrt(n) % 1 === 0;
 }
 
-const result = isSquare(81)
-
-console.log(result);
+console.log(isSquare(26));
 
