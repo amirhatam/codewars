@@ -1,7 +1,7 @@
 const pattern = [0, 0, 1]
 
 //One solution
-const fibonacci = (pattern, n) => {
+const tribonacci = (pattern, n) => {
     let sequence = [...pattern]
 
     for (let i = 0; i < n - pattern.length; i++) {
@@ -11,5 +11,14 @@ const fibonacci = (pattern, n) => {
     return sequence.slice(0, n) //return trib - length of n
 }
 
-console.log(fibonacci(pattern, 15))
+// console.log(tribonacci(pattern, 15))
 
+//BEST Practices
+
+function tribonacciP(signature, n) {
+    for (var i = 0; i < n - 3; i++) { // iterate n times
+        signature.push(signature[i] + signature[i + 1] + signature[i + 2]); // add last 3 array items and push to trib
+    }
+    return signature.slice(0, n); //return trib - length of n
+}
+console.log(tribonacciP(pattern, 15))
