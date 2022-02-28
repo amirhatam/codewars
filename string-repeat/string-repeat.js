@@ -9,3 +9,8 @@ const repeatStr = (n, str) => {
 }
 
 console.log(repeatStr(10, "Salut"));
+
+//BEST practices
+const repeatString = (n, s) => s.repeat(n)
+
+console.log(repeatString(4, "Salut"));
