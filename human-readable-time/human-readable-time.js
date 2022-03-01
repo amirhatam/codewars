@@ -1,5 +1,5 @@
 //ES6 version
-const time = (s) => {
+const timeES6 = (s) => {
     let res = 0
     if (s <= 359999) {
         let hh = Math.floor(s / 3600)
@@ -21,10 +21,10 @@ const time = (s) => {
         return null
     }
 }
-console.log(time(3599));
+console.log(timeES6(3599));
 
 //ES5 version
-function humanReadable(seconds) {
+function timeES5(seconds) {
     if (seconds < 0 || seconds > 360000) {
         return null;
     }
@@ -46,5 +46,14 @@ function humanReadable(seconds) {
     }
 
     return hours + ':' + minutes + ':' + seconds;
+}
+console.log(timeES5(3599));
+
+//BEST Practice
+function humanReadable(seconds) {
+    var pad = function (x) { return (x < 10) ? "0" + x : x; }
+    return pad(parseInt(seconds / (60 * 60))) + ":" +
+        pad(parseInt(seconds / 60 % 60)) + ":" +
+        pad(seconds % 60)
 }
 console.log(humanReadable(3599));
