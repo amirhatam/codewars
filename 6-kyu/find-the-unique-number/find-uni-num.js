@@ -7,3 +7,18 @@ const uniqueNum = (e) => {
     }
 }
 console.log(uniqueNum(arr));
+
+//BEST Practices-1
+function findUniq(arr) {
+    arr.sort((a, b) => a - b);
+    return arr[0] == arr[1] ? arr.pop() : arr[0]
+}
+
+// console.log(findUniq(arr));
+
+//Best practices-2
+function findUniqDeux(arr) {
+    return arr.find(n => arr.indexOf(n) === arr.lastIndexOf(n));
+}
+
+console.log(findUniqDeux(arr));
