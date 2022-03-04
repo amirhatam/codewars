@@ -27,3 +27,9 @@ const dotCalculator = (dot) => {
 }
 
 console.log(dotCalculator(".. - .."));
+
+//Another Best practices 
+function dotCalculator(equation) {
+    let txt = equation.split` `
+    return ".".repeat(eval(`${txt[0].length}${txt[1]}${txt[2].length}`.replace("//", "/")))
+}
