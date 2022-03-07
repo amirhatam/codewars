@@ -36,7 +36,7 @@ var snail2 = function (array) {
     return r;
 };
 
-// console.log(snail2(array));
+console.log(snail2(array));
 
 
 // Best Practice with While solution
