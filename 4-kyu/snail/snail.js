@@ -14,3 +14,26 @@ const snail = () => {
 }
 
 console.log(snail());
+
+// Another solution
+var snail2 = function (array) {
+    var rotate = function (array) {
+        var a = [];
+        for (var i = 0; i < array.length; i++)
+            for (var j = 0; j < array[i].length; j++) {
+                var k = array[i].length - 1 - j;
+                a[k] = a[k] || [];
+                a[k][i] = array[i][j];
+            }
+        return a;
+    };
+
+    var r = [];
+    while (array.length > 0) {
+        r = r.concat(array.shift());
+        array = rotate(array);
+    }
+    return r;
+};
+
+console.log(snail2(array));
