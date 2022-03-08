@@ -7,6 +7,7 @@ var list1 = [
     { firstName: 'Lukas', lastName: 'R.', country: 'Austria', continent: 'Europe', age: 89, language: 'HTML' }
 ];
 
+//Map solution
 const findJsDev = () => {
     // let res = []
     let count = 0
@@ -21,3 +22,17 @@ const findJsDev = () => {
 
 console.log(findJsDev());
 
+//For solution
+function countDevelopers() {
+    var count = 0;
+    for (var i = 0; i < list1.length; i++) {
+        if (list1[i]["continent"] === "Europe") {
+            if (list1[i]["language"] === "JavaScript") {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+console.log(countDevelopers());
