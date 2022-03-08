@@ -15,12 +15,17 @@ const greetDev = () => {
     })
     return newList
 }
-
 // console.log(greetDev());
+
+//Another solution with map & splash
+const greetDevs = list => list.map(dev => ({ ...dev, greeting: `Hi ${dev.firstName}, what do you like the most about ${dev.language}?` }));
+
+console.log(greetDevs(list));
+
 
 
 //Best practice with forEach
-function greetDevelopers(list) {
+function greetDevelopers() {
     list.forEach(function (developer) {
         developer.greeting = `Hi ${developer.firstName}, what do you like the most about ${developer.language}?`;
     });
@@ -28,4 +33,4 @@ function greetDevelopers(list) {
     return list;
 }
 
-console.log(greetDev());
+// console.log(greetDev());
