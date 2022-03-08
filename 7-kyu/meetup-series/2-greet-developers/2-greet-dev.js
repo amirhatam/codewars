@@ -16,5 +16,16 @@ const greetDev = () => {
     return newList
 }
 
+// console.log(greetDev());
+
+
+//Best practice with forEach
+function greetDevelopers(list) {
+    list.forEach(function (developer) {
+        developer.greeting = `Hi ${developer.firstName}, what do you like the most about ${developer.language}?`;
+    });
+
+    return list;
+}
 
 console.log(greetDev());
