@@ -17,10 +17,10 @@ const findJsDev = () => {
             count++
         }
     })
-    return res
+    return count
 }
 
-console.log(findJsDev());
+// console.log(findJsDev());
 
 //For solution
 function countDevelopers() {
@@ -35,4 +35,9 @@ function countDevelopers() {
     return count;
 }
 
-console.log(countDevelopers());
+// console.log(countDevelopers());
+
+//Best practice with filter
+const filterDev = () => list1.filter(e => e.continent == 'Europe' && e.language == 'JavaScript').length
+
+console.log(filterDev());
