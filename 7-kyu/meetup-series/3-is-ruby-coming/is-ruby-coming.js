@@ -16,3 +16,8 @@ const devRuby = () => {
 }
 
 console.log(devRuby());
+
+// Best practice with some
+const isRubyComing = () => list.some(e => e.language === 'Ruby');
+
+console.log(isRubyComing());
