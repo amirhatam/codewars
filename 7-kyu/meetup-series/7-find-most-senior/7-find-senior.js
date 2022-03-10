@@ -12,14 +12,14 @@ const findSenior = () => {
         maxAge = Math.max(e.age)
     })
     for (let i = 0; i < list.length; i++) {
-        if (list[i].age >= maxAge) {
+        if (list[i].age === maxAge) {
             res.push(list[i])
         }
     }
     return res
 }
 
-// console.log(findSenior());
+console.log(findSenior());
 
 //Best practices
 function findSenior2() {
