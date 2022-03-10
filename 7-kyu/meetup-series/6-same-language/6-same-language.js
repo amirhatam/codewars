@@ -22,4 +22,10 @@ const sameLang = () => {
     return res
 }
 
-console.log(sameLang());
+// console.log(sameLang());
+
+
+//Best practices
+const isSameLanguage = () => list.every(e => e.language === list[0].language);
+
+console.log(isSameLanguage());
