@@ -18,3 +18,8 @@ function countLanguages() {
     return count;
 }
 console.log(countLanguages());
+
+//Short solution with reduce
+const countLanguagesShort = list => list.reduce((languages, { language }) => ((languages[language] = (languages[language] || 0) + 1), languages), {})
+
+console.log(countLanguagesShort());
