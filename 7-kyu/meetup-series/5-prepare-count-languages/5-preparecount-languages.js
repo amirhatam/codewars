@@ -5,21 +5,41 @@ var list = [
     { firstName: 'George', lastName: 'B.', country: 'England', continent: 'Europe', age: 81, language: 'C' },
 ];
 
-var list2 = [
-    { firstName: "Mark", lastName: "G.", country: "Scotland", continent: "Europe", age: 22, language: "JavaScript" },
-    { firstName: "Victoria", lastName: "T.", country: "Puerto Rico", continent: "Americas", age: 30, language: "Python" },
-    { firstName: "Emma", lastName: "B.", country: "Norway", continent: "Europe", age: 19, language: "Clojure" }
-]
-
 //Best practices with forEach
 function countLanguages() {
     var count = {};
     list.forEach(e => count[e.language] = (count[e.language] || 0) + 1);
     return count;
 }
-console.log(countLanguages());
+// console.log(countLanguages());
+
+
 
 //Short solution with reduce
 const countLanguagesShort = list => list.reduce((languages, { language }) => ((languages[language] = (languages[language] || 0) + 1), languages), {})
 
-console.log(countLanguagesShort());
+// console.log(countLanguagesShort());
+
+
+
+//loop solution
+function countLanguages() {
+
+    let langCount = {};
+
+    // loop through each object in the array
+    for (let i = 0; i < list.length; i++) {
+        // find language for each developer
+        // add language to object if it does exist
+        if (langCount[list[i].language] === undefined) {
+            langCount[list[i].language] = 1;
+        } else {
+            // otherwise increment language count by 1
+            langCount[list[i].language]++;
+        }
+    }
+    // return object
+    return langCount;
+}
+
+console.log(countLanguages());
