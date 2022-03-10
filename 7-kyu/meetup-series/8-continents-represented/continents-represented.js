@@ -68,4 +68,10 @@ const validationContinents = () => {
     return res
 }
 
-console.log(validationContinents());
+// console.log(validationContinents());
+
+//Best practices
+const continents = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
+const allContinents = () => continents.every(x => list.some(y => x == y.continent));
+
+console.log(allContinents());
