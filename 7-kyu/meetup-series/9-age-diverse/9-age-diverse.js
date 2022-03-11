@@ -24,7 +24,7 @@ const list3 = [
 ];
 
 
-//Long solution with boucle for
+//Long solution with boucle for & if
 const ageDiverse = () => {
     const rateAge = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
@@ -49,13 +49,33 @@ const ageDiverse = () => {
             rateAge[8]++
         else if (list[i].age >= 100 && list[i].age < 200)
             rateAge[9]++
-
     }
     return rateAge.every(e => e >= 1)
 }
 
 // console.log(ageDiverse());
 
+//BEST practices with map & if
+function ageDiverseMap() {
+    const ageList = list.map(x => x.age)
+    if (
+        ageList.some(x => (x >= 0 && x < 20)) &&
+        ageList.some(x => (x >= 20 && x < 30)) &&
+        ageList.some(x => (x >= 30 && x < 40)) &&
+        ageList.some(x => (x >= 40 && x < 50)) &&
+        ageList.some(x => (x >= 50 && x < 60)) &&
+        ageList.some(x => (x >= 60 && x < 70)) &&
+        ageList.some(x => (x >= 70 && x < 80)) &&
+        ageList.some(x => (x >= 80 && x < 90)) &&
+        ageList.some(x => (x >= 90 && x < 100)) &&
+        ageList.some(x => (x >= 100 && x < 200))
+    ) {
+        return true
+    } else {
+        return false
+    }
+}
+console.log(ageDiverseMap());
 
 // BEST practices 
 const isAgeDiverse = () => {
@@ -65,4 +85,4 @@ const isAgeDiverse = () => {
 }
 
 
-console.log(isAgeDiverse());
+// console.log(isAgeDiverse());
