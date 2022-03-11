@@ -24,7 +24,7 @@ const list3 = [
 ];
 
 
-
+//Long solution with boucle for
 const ageDiverse = () => {
     const rateAge = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
@@ -54,5 +54,15 @@ const ageDiverse = () => {
     return rateAge.every(e => e >= 1)
 }
 
-console.log(ageDiverse());
-// ageDiverse()
+// console.log(ageDiverse());
+
+
+// BEST practices 
+const isAgeDiverse = () => {
+    return list.some(h => h.age >= 100)
+        ? [10, 20, 30, 40, 50, 60, 70, 80, 90].every(e => list.some(x => x.age - e >= 0 && x.age - e <= 9))
+        : false
+}
+
+
+console.log(isAgeDiverse());
