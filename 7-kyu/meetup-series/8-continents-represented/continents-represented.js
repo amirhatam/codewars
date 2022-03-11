@@ -72,6 +72,6 @@ const validationContinents = () => {
 
 //Best practices
 const continents = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
-const allContinents = () => continents.every(x => list.some(y => x == y.continent));
+const allContinents = () => continents.every(e => list.some(y => e == y.continent));
 
 console.log(allContinents());
