@@ -14,4 +14,9 @@ const getAvrageAge = () => {
     return Math.round(average(ageList))
 
 }
-console.log(getAvrageAge());
+// console.log(getAvrageAge());
+
+//Best Solution
+const averageAge = () => Math.round(list.reduce((sum, obj) => sum + obj.age, 0) / list.length);
+
+console.log(averageAge());
