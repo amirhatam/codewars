@@ -5,7 +5,7 @@ const list = [
     { firstName: 'Piotr', lastName: 'B.', country: 'Poland', continent: 'Europe', age: 128, language: 'JavaScript', githubAdmin: 'no' }
 ];
 
-//One solution But Not accepted !!!
+//One solution with map But Not accepted !!!
 const findAdmin = (list, lang) => {
     let newList = []
     list.map(e => {
@@ -18,3 +18,7 @@ const findAdmin = (list, lang) => {
 
 console.log(findAdmin(list, 'JavaScript'));
 
+//Best practices
+const findGitAdmin = (list, lang) => list.filter(({ language, githubAdmin }) => language === lang && githubAdmin === 'yes')
+
+console.log(findGitAdmin(list, 'JavaScript'));
