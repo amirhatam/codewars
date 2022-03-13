@@ -15,6 +15,7 @@ const isLanguageDiverse = () => {
 
     for (let dev of list)
         counts[dev.language] = (counts[dev.language] || 0) + 1;
+    console.log(counts);
 
     for (let lang in counts) {
         min = Math.min(counts[lang], min);
@@ -23,7 +24,7 @@ const isLanguageDiverse = () => {
     return max <= 2 * min
 }
 
-// console.log(isLanguageDiverse());
+console.log(isLanguageDiverse());
 
 //Second Best Practices
 const languageDiverse = () => {
@@ -32,4 +33,4 @@ const languageDiverse = () => {
     return Math.max.apply(null, list) / Math.min.apply(null, list) <= 2
 }
 
-console.log(languageDiverse());
+// console.log(languageDiverse());
