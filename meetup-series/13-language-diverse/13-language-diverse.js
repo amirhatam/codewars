@@ -7,24 +7,6 @@ var list = [
     { firstName: 'Joao', lastName: 'D.', country: 'Portugal', continent: 'Europe', age: 25, language: 'JavaScript' }
 ];
 
-// const langdiverse = () => {
-//     let count = []
-//     for (let i = 0; i < list.length; i++) {
-//         let language = 0
-//         for (let j = 0; j < list.length; j++) {
-//             console.log("i", list[i].language);
-//             console.log("j", list[j].language);
-//             // if (list[i].language === list[j].language) {
-//             //     console.log(list[j].language);
-//             //     language++
-//             //     count.push(language)
-//             // }
-//         }
-//     }
-//     // return count
-// }
-
-
 //Best Practices
 const isLanguageDiverse = () => {
     let counts = {}
@@ -41,5 +23,13 @@ const isLanguageDiverse = () => {
     return max <= 2 * min
 }
 
+// console.log(isLanguageDiverse());
 
-console.log(isLanguageDiverse());
+//Second Best Practices
+const languageDiverse = () => {
+    newList = list.map(dev => dev.lastName)
+    const num = [...new Set(list)].map(el => list.filter(e => e === el).length)
+    return Math.max.apply(null, list) / Math.min.apply(null, list) <= 2
+}
+
+console.log(languageDiverse());
