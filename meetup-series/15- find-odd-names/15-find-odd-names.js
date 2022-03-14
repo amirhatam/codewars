@@ -17,4 +17,13 @@ const findOddNames = () => {
     return odd;
 }
 
-console.log(findOddNames());
+// console.log(findOddNames());
+
+//Best Practices 
+function findOddName() {
+    return list.filter((d) => {
+        return d.firstName.split('').reduce(((r, e) => r + e.charCodeAt(0)), 0) % 2 !== 0
+    });
+}
+
+console.log(findOddName());
