@@ -26,5 +26,10 @@ const orderFood = () => {
     return foodList
 }
 
+// console.log(orderFood());
 
-console.log(orderFood());
+
+//Another Best practice 
+const orderFoods = list => list.reduce((acc, dev) => (acc[dev.meal] = (acc[dev.meal] || 0) + 1, acc), {})
+
+console.log(orderFoods(list));
