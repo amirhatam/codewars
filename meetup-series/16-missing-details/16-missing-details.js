@@ -13,6 +13,7 @@ const askForMissingDetails = () => {
 
 // console.log(askForMissingDetails());
 
+//BEST practices
 const missingDetails = () => {
     return list.filter((dev) => {
         for (let key in dev) {
