@@ -11,3 +11,6 @@ const oddCount = (n) => {
 }
 
 console.log(countOdd(15));
+
+//BEST practice
+const oddCountB = (n) => Math.floor(n / 2)
