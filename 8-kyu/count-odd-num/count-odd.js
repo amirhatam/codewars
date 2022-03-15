@@ -11,4 +11,3 @@ const oddCount = (n) => {
 }
 
 console.log(countOdd(15));
-
