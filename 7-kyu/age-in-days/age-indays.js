@@ -1,4 +1,4 @@
-// It's not completed  Passed: 2  Failed: 1
+// One Solution
 const ageCalculator = (y, m, d) => {
 
     let year = new Date().getFullYear()
@@ -29,16 +29,10 @@ const ageCalculator = (y, m, d) => {
     }
     resYear -= y
 
-
-
-    console.log(resYear, "Years, ", resMonth, "Months, ", resDay, "Days");
     const ageInDays = (resYear * 365) + (resMonth * 31) + resDay
-
 
     const res = `You are ${ageInDays} days old`
     return res
 }
 
 console.log(ageCalculator(2007, 04, 28));
-// console.log(ageCalculator(1986, 10, 10));
-// ageCalculator(1986, 10, 10)
