@@ -5,9 +5,6 @@ const ageCalculator = (y, m, d) => {
     let month = new Date().getMonth() + 1
     let day = new Date().getDate()
 
-    let arrMonths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    let arrMonthsD = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-
     let resDay = 0
     let resMonth = 0
     let resYear = 0
@@ -34,5 +31,10 @@ const ageCalculator = (y, m, d) => {
     const res = `You are ${ageInDays} days old`
     return res
 }
+
+console.log(ageCalculator(2007, 04, 28));
+
+//BEST Practices
+const ageInDays = (y, m, d) => 'You are ' + (new Date() - new Date().setFullYear(y, m - 1, d)) / 86400000 + ' days old';
 
 console.log(ageCalculator(2007, 04, 28));
