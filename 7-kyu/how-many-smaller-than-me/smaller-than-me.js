@@ -5,4 +5,4 @@ const arr2 = [1, 2, 0]
 const smaller = () => arr.map((n, i) => arr.slice(i).filter(v => v < n).length)
 
 
-console.log(smallerThanMe());
+console.log(smaler());
