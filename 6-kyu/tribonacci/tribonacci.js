@@ -11,14 +11,16 @@ const tribonacci = (pattern, n) => {
     return sequence.slice(0, n) //return trib - length of n
 }
 
-// console.log(tribonacci(pattern, 15))
+console.log(tribonacci(pattern, 15))
 
 //BEST Practices
-
 function tribonacciP(signature, n) {
     for (var i = 0; i < n - 3; i++) { // iterate n times
-        signature.push(signature[i] + signature[i + 1] + signature[i + 2]); // add last 3 array items and push to trib
+        let res = signature[i] + signature[i + 1] + signature[i + 2]
+        if (res <= n) {
+            signature.push(res); // add last 3 array items and push to trib
+        }
     }
     return signature.slice(0, n); //return trib - length of n
 }
-console.log(tribonacciP(pattern, 15))
+// console.log(tribonacciP(pattern, 15))
