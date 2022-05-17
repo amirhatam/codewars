@@ -18,9 +18,9 @@ const isSquare = function (n) {
 
 
 //BEST Practices
-function isSquare(n) {
+function isSquareBest(n) {
     return Math.sqrt(n) % 1 === 0;
 }
 
-console.log(isSquare(26));
+console.log(isSquareBest(140));
 
