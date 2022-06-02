@@ -11,5 +11,14 @@ const removeSec = (a) => {
     }
     return newArr
 }
+// console.log(removeSec(arr));
 
-console.log(removeSec(arr));
+
+//Best Practices
+function removeEveryOther(arr) {
+    return arr.filter(function (elem, index) {
+        return index % 2 === 0;
+    });
+}
+
+console.log(removeEveryOther(arr));
