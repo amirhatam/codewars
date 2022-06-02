@@ -1,3 +1,4 @@
+// Premier solution
 const reverse = (s) => {
     let splitName = s.split("")
     let indexOfSpace = splitName.indexOf(' ')
@@ -22,4 +23,12 @@ const reverse = (s) => {
     return JSON.stringify(joinRes)
 }
 
-console.log(reverse('john McClane'));
+// console.log(reverse('john McClane'));
+
+//Sec Solution
+function nameShuffler(str) {
+    const fullName = str.split(" ");
+    return [fullName[1], fullName[0]].join(" ");
+}
+
+console.log(nameShuffler('john McClane'));
