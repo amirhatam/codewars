@@ -1,3 +1,21 @@
+//Best Practices
+// const nameShuffler = str => str.split(' ').reverse().join(' ');
+//Or
+function nameSuffle(str) {
+    return str.split(' ').reverse().join(' ')
+}
+
+//Sec Solution
+function nameShuffler(str) {
+    const fullName = str.split(" ");
+    console.log("=>", fullName);
+
+    return [fullName[1], fullName[0]].join(" ");
+}
+
+
+
+
 // Premier solution
 const reverse = (s) => {
     let splitName = s.split("")
@@ -25,10 +43,9 @@ const reverse = (s) => {
 
 // console.log(reverse('john McClane'));
 
-//Sec Solution
-function nameShuffler(str) {
-    const fullName = str.split(" ");
-    return [fullName[1], fullName[0]].join(" ");
-}
 
-console.log(nameShuffler('john McClane'));
+
+
+
+
+console.log(nameSuffle('john McClane'));
