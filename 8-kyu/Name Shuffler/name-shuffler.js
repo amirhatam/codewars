@@ -16,8 +16,10 @@ const reverse = (s) => {
         let item = splitName[i]
         result.push(item)
     }
+    const joinRes = result.join('')
 
-    return result.join('')
+
+    return JSON.stringify(joinRes)
 }
 
 console.log(reverse('john McClane'));
