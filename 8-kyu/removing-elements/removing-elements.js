@@ -21,4 +21,4 @@ function removeEveryOther(arr) {
     });
 }
 
-console.log(removeEveryOther(arr));
+// console.log(removeEveryOther(arr));
