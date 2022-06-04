@@ -8,7 +8,6 @@ function nameSuffle(str) {
 //Sec Solution
 function nameShuffler(str) {
     const fullName = str.split(" ");
-    console.log("=>", fullName);
 
     return [fullName[1], fullName[0]].join(" ");
 }
