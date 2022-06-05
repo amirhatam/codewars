@@ -12,4 +12,9 @@ const replaceDots = function (str) {
 }
 
 
-console.log(replaceDots("one.two.three"));
+//Best Practices
+const replaceAllDots = function (str) {
+    return str.replace(/\./g, '-');
+}
+
+console.log(replaceAllDots("one.two.three"));
