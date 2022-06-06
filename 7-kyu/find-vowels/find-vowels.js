@@ -33,4 +33,18 @@ const vowelsIndex = (s) => {
     return res
 }
 
-console.log(vowelsIndex('YoMama'));
+// console.log(vowelsIndex('YoMama'));
+
+//Best Practices
+function vowelIndices(word) {
+    var arr = [];
+    for (var i = 0; i < word.length; i++) {
+        if (/[aeioyu]/i.test(word[i])) {
+            arr.push(i + 1);
+        }
+    }
+    return arr;
+}
+
+
+console.log(vowelIndices('YoMama'));
