@@ -11,6 +11,8 @@ function solution(str, ending) {
     return str.endsWith(ending);
 }
 
+
+
 console.log(solution('sumo', 'omo'));
 // console.log(solution('abc', 'bc'));
 
