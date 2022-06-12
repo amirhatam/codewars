@@ -13,7 +13,8 @@ function numberOfPairs(gloves) {
     }
     return countPair
 }
-// console.log(numberOfPairs(["red", "green", "red", "blue", "blue", "blue", "blue"]));
+
+console.log(numberOfPairs(["red", "green", "red", "blue", "blue", "blue", "blue"]));
 
 
 //Best Practices
@@ -23,7 +24,6 @@ function pairsNum(gloves) {
         , counts = {};
 
     for (let color of gloves) {
-
         if (!counts.hasOwnProperty(color))
             counts[color] = 0;
 
@@ -36,4 +36,4 @@ function pairsNum(gloves) {
     return pairs;
 }
 
-console.log(pairsNum(["red", "green", "red", "blue", "blue", "blue", "blue"]));
+// console.log(pairsNum(["red", "green", "red", "blue", "blue", "blue", "blue"]));
