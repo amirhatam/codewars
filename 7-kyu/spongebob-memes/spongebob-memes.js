@@ -15,5 +15,13 @@ const spongebobMemes = (s) => {
     return res.join('')
 }
 
+// console.log(spongebobMemes("stop Making spongebob Memes!"));
 
-console.log(spongebobMemes("stop Making spongebob Memes!"));
+
+
+//BEst Practices
+function spongeMeme(s) {
+    return s.split('').map((v, i) => i % 2 ? v.toLowerCase() : v.toUpperCase()).join('');
+}
+
+console.log(spongeMeme("stop Making spongebob Memes!"));
