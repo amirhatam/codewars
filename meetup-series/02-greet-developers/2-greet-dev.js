@@ -4,6 +4,8 @@ const list = [
     { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' }
 ];
 
+
+
 //One solution with map & Object.assign
 const greetDev = () => {
     let newList = []
