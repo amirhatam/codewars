@@ -9,5 +9,6 @@ const findMultiples = (integer, limit) => {
     return res
 }
 
+
 // findMultiples(2, 6)
 console.log(findMultiples(2, 6));
