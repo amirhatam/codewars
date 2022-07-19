@@ -12,5 +12,11 @@ function moveZeros(arr) {
     return [...newArr, ...zeros]
 }
 
-// moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"])
-console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));
+// console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));
+
+
+//Best Practices
+const moveZero = (a) => a.filter(e => e !== 0).concat(a.filter(e => e === 0))
+
+
+console.log(moveZero([false, 1, 0, 1, 2, 0, 1, 3, "a"]));
