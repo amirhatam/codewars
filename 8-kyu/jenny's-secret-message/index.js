@@ -8,4 +8,9 @@ function greet(name) {
 
 }
 
-console.log(greet('Johnny'));
+// console.log(greet('Johnny'));
+
+//Short way 
+const greets = (n) => n === "Johnny" ? "Hello, my love!" : "Hello, " + n + "!";
+
+console.log(greets('Johnny'));
