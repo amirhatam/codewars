@@ -6,4 +6,7 @@ const doubledValue = (arr) => {
     return newArr
 }
 
-console.log(doubledValue([1, 2, 3]));
+// console.log(doubledValue([1, 2, 3]));
+
+//Short way
+const maps = arr => arr.map(x => x * 2)
