@@ -15,6 +15,8 @@ const sumOfDigit = (n) => {
 // console.log(sumOfDigit(132189));
 
 //Best practices :|
-const digital_root = (n) => (n - 1) % 9 + 1;
+function digital_root(n) {
+    return (n - 1) % 9 + 1;
+}
 
-console.log(digital_root(132189));
+console.log(digital_root(21));
