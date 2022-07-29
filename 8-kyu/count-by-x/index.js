@@ -8,5 +8,17 @@ const solutionA = (x, n) => {
     return res
 }
 
+// console.log(solutionA(2, 5));
 
-console.log(solutionA(2, 5));
+//Best Practices
+function countBy(x, n) {
+    let z = []
+
+    for (let i = 1; i <= n; i++) {
+        z.push(x * i)
+    }
+
+    return z
+}
+
+console.log(countBy(2, 5));
