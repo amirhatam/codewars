@@ -28,7 +28,7 @@
 
 ## Scoring
 
-<img src="C:\Users\amirh\OneDrive\Desktop\Work\Codewars\6-kyu\fruit-machine\scoring.PNG" />
+ <img src="https://mdbootstrap.com/wp-content/uploads/2020/12/learnmore-1.png">
 
 ## Returns
 
