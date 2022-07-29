@@ -28,7 +28,7 @@
 
 ## Scoring
 
- <img src="https://mdbootstrap.com/wp-content/uploads/2020/12/learnmore-1.png">
+ <img src="https://ibb.co/tpZkTNJ">
 
 ## Returns
 
