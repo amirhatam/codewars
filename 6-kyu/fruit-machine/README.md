@@ -28,7 +28,7 @@
 
 ## Scoring
 
- <img src="https://ibb.co/tpZkTNJ">
+ <img src="https://i.ibb.co/gZvHLXR/scoring.png">
 
 ## Returns
 
