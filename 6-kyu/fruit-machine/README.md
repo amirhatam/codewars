@@ -28,7 +28,7 @@
 
 ## Scoring
 
-<td><img src="C:\Users\amirh\OneDrive\Desktop\Work\Codewars\6-kyu\fruit-machine\scoring.PNG">
+<img src="C:\Users\amirh\OneDrive\Desktop\Work\Codewars\6-kyu\fruit-machine\scoring.PNG" />
 
 ## Returns
 
