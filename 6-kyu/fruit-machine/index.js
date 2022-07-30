@@ -46,9 +46,11 @@ const play = () => {
     return score
 }
 
-console.log(play());
+// console.log(play());
 
-//First Solution
+
+
+//First Solution 
 const fruits = (reels, spins) => {
     const object = {}
     const array = [reels[0][spins[0]], reels[1][spins[1]], reels[2][spins[2]]].map(e => object[e] = object[e] ? object[e] + 1 : 1)
@@ -85,4 +87,49 @@ const fruits = (reels, spins) => {
     if (object['Jack'] === 2 && object['Wild'] === 1) score += 2
 
     return score
+}
+
+
+
+//BEST PRACTICES without Parameters (FULL GAME)
+function fruitPlay() {
+    const reel = ["Wild", "Star", "Bell", "Shell", "Seven", "Cherry", "Bar", "King", "Queen", "Jack"]
+    let reels = []
+    let spins = []
+
+    for (let i = 0; i < 3; i++) {
+        const random = Math.ceil(Math.random() * 9)
+        spins.push(random)
+        reels.push(reel[random])
+    }
+
+    let [a, b, c] = spins.sort((a, b) => a - b);
+
+    if (a === b && b === c)
+        return a * 10;
+
+    if (a === b)
+        return c === 10 ? a * 2 : a;
+
+    return b === c ? b : 0;
+}
+
+console.log(fruitPlay());
+
+
+
+function fruit(reels, spins) {
+    let map = ['Jack', 'Queen', 'King', 'Bar', 'Cherry', 'Seven', 'Shell', 'Bell', 'Star', 'Wild'];
+
+    let [a, b, c] = reels
+        .map((reel, i) => map.indexOf(reel[spins[i]]) + 1)
+        .sort((a, b) => a - b);
+
+    if (a === b && b === c)
+        return a * 10;
+
+    if (a === b)
+        return c === 10 ? a * 2 : a;
+
+    return b === c ? b : 0;
 }
