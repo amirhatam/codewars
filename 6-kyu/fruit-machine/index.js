@@ -93,25 +93,37 @@ const fruits = (reels, spins) => {
 
 //BEST PRACTICES without Parameters (FULL GAME)
 function fruitPlay() {
-    const reel = ["Wild", "Star", "Bell", "Shell", "Seven", "Cherry", "Bar", "King", "Queen", "Jack"]
+    const reel = ['Jack', 'Queen', 'King', 'Bar', 'Cherry', 'Seven', 'Shell', 'Bell', 'Star', 'Wild']
     let reels = []
     let spins = []
 
     for (let i = 0; i < 3; i++) {
         const random = Math.ceil(Math.random() * 9)
-        spins.push(random)
+        spins.push(random + 1)
         reels.push(reel[random])
     }
 
+    // console.log(spins, reels);
     let [a, b, c] = spins.sort((a, b) => a - b);
 
-    if (a === b && b === c)
-        return a * 10;
 
-    if (a === b)
-        return c === 10 ? a * 2 : a;
+    let score = 0
 
-    return b === c ? b : 0;
+    if (a === b && b === c) {
+        score = a * 10;
+    }
+
+    if (a === b) {
+        if (c === 10) {
+            score += a * 2
+        } else { score += a }
+    }
+
+    if (b === c) {
+        score += b
+    } else { score += 0 }
+
+    return score
 }
 
 console.log(fruitPlay());
