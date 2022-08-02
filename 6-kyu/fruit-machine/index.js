@@ -126,7 +126,7 @@ function fruitPlay() {
     return score
 }
 
-console.log(fruitPlay());
+// console.log(fruitPlay());
 
 
 
