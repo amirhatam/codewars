@@ -21,7 +21,7 @@ const timeES6 = (s) => {
         return null
     }
 }
-console.log(timeES6(3599));
+// console.log(timeES6(3599));
 
 //ES5 version
 function timeES5(seconds) {
