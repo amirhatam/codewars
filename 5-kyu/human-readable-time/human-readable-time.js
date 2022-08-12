@@ -47,7 +47,7 @@ function timeES5(seconds) {
 
     return hours + ':' + minutes + ':' + seconds;
 }
-console.log(timeES5(3599));
+// console.log(timeES5(3599));
 
 //BEST Practice
 function humanReadable(seconds) {
