@@ -21,7 +21,7 @@ const timeES6 = (s) => {
         return null
     }
 }
-console.log(timeES6(3599));
+// console.log(timeES6(3599));
 
 //ES5 version
 function timeES5(seconds) {
@@ -47,7 +47,7 @@ function timeES5(seconds) {
 
     return hours + ':' + minutes + ':' + seconds;
 }
-console.log(timeES5(3599));
+// console.log(timeES5(3599));
 
 //BEST Practice
 function humanReadable(seconds) {
