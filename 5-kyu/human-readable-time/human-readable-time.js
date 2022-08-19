@@ -57,4 +57,4 @@ function humanReadable(seconds) {
         pad(seconds % 60)
 }
 
-// console.log(humanReadable(3599));
+console.log(humanReadable(3599));
