@@ -8,6 +8,7 @@ const solution = (N) => {
 
 console.log(solution(35231));
 
+//Best practices
 function digitize(n) {
     return String(n).split('').map(Number).reverse()
 }
